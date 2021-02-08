@@ -1,0 +1,38 @@
+div.header{
+	background:#f0efeb;
+	position:absolute;
+	top:10px;
+	left:150px;
+	width:100%;
+	text-align:center;
+}
+
+div.area_de_trabajo a{
+    color:black;
+    background:#EAE6E5;
+    font-family:Calibri;
+    text-decoration:none;
+}
+
+div.logo img{
+	width:90px;
+	background:#f0efeb;
+	margin-left:10px; 
+	border-radius:30px;
+	
+}
+div.area_de_trabajo a:hover{
+	color: red;
+}
+div.area_de_trabajo li:hover{
+	background:#ece4db;
+	border:solid 1px;
+	width:100px;
+	transition:all 0.3s ease;
+}
+div.id footer{
+	background:black;
+}
+body{
+	background:#cce6f4;
+

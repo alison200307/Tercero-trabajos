@@ -1,0 +1,50 @@
+div.container{
+	/*background:#FFB1A2;*/
+}
+body{
+	background:#cce6f4;
+
+}
+div.header{
+	background:#caf0f8;
+	position:absolute;
+	top:10px;
+	left:215px;
+	width:80%;
+	text-align:center;
+}
+div.logo img{
+	width:200px;
+	background:#f0efeb;
+	margin-left:5px; 
+	border-radius:3px;
+}
+div.menu{
+	width:200px;
+	position:absolute;
+	height:80%;
+	border-right:solid 1px black;
+}
+div.menu ul{
+	margin-left:5px;
+}
+div.menu li{
+	margin-top:5px;
+	list-style:none;
+}
+div.menu a{
+	text-decoration:none;
+    color:black;
+    background:#fcd5ce;
+    border-radius:3px;
+    font-family:Verdana;
+    
+}
+div.header span{
+	font-size:0.5in;
+	font-family:Verdana;
+	color:black;
+	text-transform:uppercase;
+
+}
+div.menu 
