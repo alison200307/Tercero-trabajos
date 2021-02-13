@@ -1,12 +1,15 @@
 $(function(){ //CUANDO CARGE LA PAGINA
 
-	traer_datos();
+	//traer_datos();
 
-	//alert("ok");
+	alert("ok");
 
 });
 
+	
 
+
+/*
 $(document).on("click",".btn_registrar",()=>{
 	let ap = $("#apellidos").val();
 	if(ap.length==0){
@@ -74,42 +77,40 @@ Swal.fire({
 
 
 //];
-const traer_datos=()=>{
-	$.ajax({
-		url:'./clases/acciones.php',
-		method:'GET',
-		beforesend:()=>{	
-			
+//const traer_datos=()=>{
+	//alert("ok");
+	//$.ajax({
+		//url:'./clases/acciones.php',
+		//method:'GET',
+		//beforesend:()=>{	
 
 
-		},
-		success:(result)=>{
-			const usuarios=$.parseJSON(result);
-			let row="";
-			usuarios.map( (item)=>{	
-			row+=`<tr>   <td></td>
-			             <td>${item[1]}</td>
-			             <td>${item[2]}</td>
-			             <td>${item[3]}</td>
-			             <td>${item[4]}</td>
-			             <td>${item[5]}</td>
-			             <td>${item[6]}</td>
-			             <td>${item[7]}</td>
-			             <td>${item[8]}</td>
-			             <td>${item[9]}</td>
-			             <td>${item[10]}</td>
-			             <td>${item[11]}</td>
-			             <td>${item[12]}</td>
-			             <td> <i class='btn btn-info btn-xs'>../i></td>
-			    </tr>`;
-})
-	$("#tbody_datos").html(row);
+		//},
+		//success:(result)=>{
+			//const usuarios=$.parseJSON(result);
+			//let row="";
+			////usuarios.map( (item)=>{	
+			////row+=`<tr>   <td> </td>
+			            // <td>${item[1]}</td>
+			            // <td>${item[2]}</td>
+			            // <td>${item[3]}</td>
+			            // <td>${item[4]}</td>
+			            // <td>${item[5]}</td>
+			            // <td>${item[6]}</td>
+			            // <td>${item[7]}</td>
+			            // <td>${item[8]}</td>
+			            // <td>${item[9]}</td>
+			           //<td>${item[10]}</td>
+			          // <td>${item[11]}</td>
+			          // <td>${item[12]}</td>
+			    //</tr>`;
+//})
+	//$("#tbody_datos").html(row);
 		
+		//}
 		
-		}
-		
-	});
-}
+	//});
+//}
 //$(function() {
 	//alert('ok');
 	
@@ -120,3 +121,4 @@ const traer_datos=()=>{
 		//$("msj_ciudad").attr("class","bg-danger");
 
 	//}
+*/
