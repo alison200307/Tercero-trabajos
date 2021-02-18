@@ -2,10 +2,7 @@ $(function(){ //CUANDO CARGE LA PAGINA
 
 	traer_datos();
 
-	//alert("ok");
-
-});
-
+})
 
 $(document).on("click",".btn_registrar",()=>{
 	let ap = $("#apellidos").val();
@@ -18,11 +15,6 @@ $(document).on("click",".btn_registrar",()=>{
 		$("#msj_nombres").attr("class","bg-danger");
 		return false;
 	}
-	let cd = $("#cedula").val();
-	if(cd.length==0){
-		$("#msj_cedula").attr("class","bg-danger");
-		return false;
-	}
 	let co = $("#correo").val();
 	if(co.length==0){
 		$("#msj_correo").attr("class","bg-danger");
@@ -31,6 +23,31 @@ $(document).on("click",".btn_registrar",()=>{
     let city = $("#ciudad").val();
 	if(city.length==0) {
 		$("#msj_ciudad").attr("class","bg-danger");
+		return false;
+	}
+	let drc = $("#direccion").val();
+	if(drc.length==0) {
+		$("#msj_direccion").attr("class","bg-danger");
+		return false;
+	}
+	let tlf = $("#telefono").val();
+	if(tlf.length==0) {
+		$("#msj_telefono").attr("class","bg-danger");
+		return false;
+	}	
+	let fn = $("#fecha_nacimiento").val();
+	if(fn.length==0) {
+		$("#msj_fecha_nacimiento").attr("class","bg-danger");
+		return false;
+	}	
+	let us = $("#usuario").val();
+	if(us.length==0) {
+		$("#msj_usuario").attr("class","bg-danger");
+		return false;
+	}
+	let ps = $("#password").val();
+	if(ps.length==0) {
+		$("#msj_password").attr("class","bg-danger");
 		return false;
 	}	
 	let obj_sexo=$(".obj_radio");
@@ -50,7 +67,10 @@ $(document).on("click",".btn_registrar",()=>{
 	    alerta('error','Debe aceptar los terminos y condiciones','Alerta',true,'center',0);
 	    return false;
 }
- alerta('success','Datos Registrados','Proceso correcto',false,'bottom-end',3000);
+ let datos=[ap,n,co,city,drc,tlf,fn,us,ps];
+ console.log(datos);
+
+ //alerta('success','Datos Registrados','Proceso correcto',false,'bottom-end',3000);
 
  })
 const alerta=(icon,text,title,showConfirmButton,position,timer)=>{
@@ -100,7 +120,7 @@ const traer_datos=()=>{
 			             <td>${item[10]}</td>
 			             <td>${item[11]}</td>
 			             <td>${item[12]}</td>
-			             <td> <i class='btn btn-info btn-xs'>../i></td>
+			             <td> <i class='btn btn-info btn-xs'>Editar </i></td>
 			    </tr>`;
 })
 	$("#tbody_datos").html(row);
