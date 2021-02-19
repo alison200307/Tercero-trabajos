@@ -45,8 +45,8 @@ $(document).on("click",".btn_registrar",()=>{
 		$("#msj_usuario").attr("class","bg-danger");
 		return false;
 	}
-	let ps = $("#password").val();
-	if(ps.length==0) {
+	let password = $("#password").val();
+	if(password.length==0) {
 		$("#msj_password").attr("class","bg-danger");
 		return false;
 	}	
@@ -67,9 +67,9 @@ $(document).on("click",".btn_registrar",()=>{
 	    alerta('error','Debe aceptar los terminos y condiciones','Alerta',true,'center',0);
 	    return false;
 }
- let datos=[ap,n,co,city,drc,tlf,fn,us,ps];
- console.log(datos);
-
+ let datos=[ap,n,co,city,drc,tlf,fn,us,password];
+ //console.log(datos);
+envio_datos(datos);
  //alerta('success','Datos Registrados','Proceso correcto',false,'bottom-end',3000);
 
  })
@@ -99,9 +99,6 @@ const traer_datos=()=>{
 		url:'./clases/acciones.php',
 		method:'GET',
 		beforesend:()=>{	
-			
-
-
 		},
 		success:(result)=>{
 			const usuarios=$.parseJSON(result);
@@ -129,6 +126,21 @@ const traer_datos=()=>{
 		}
 		
 	});
+}
+
+const envio_datos=(datos)=>{
+	$.ajax({
+		url:'./clases/acciones.php' ,
+		method:'POST' ,
+		data:{datos:datos,op:1} ,
+		beforeSend:()=>{
+		},
+		success:(result)=>{
+			console.log(result);
+
+		}
+	})
+
 }
 //$(function() {
 	//alert('ok');
