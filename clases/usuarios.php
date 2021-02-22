@@ -10,34 +10,69 @@ function listar_usuarios(){
 		return $this->con->query("SELECT * FROM usuarios");
 	}
 }
-function insertar_usuarios(){
+function create_user($datos){
+	$fecha=date('Y-m-d');
 	if($this->con){
-		return $this->con->query("INSERT INTO usuarios 
-                                (id,apellidos,nombres,ciudad,direccion,telefono,correo,sexo,fecha_nacimiento,usuario,contraseña,estado,fecha_registro)
-                                VALUES (6,'Pilca','Damaris','Quito','El conde','0995212854','damaris@gmail.com','Mujer','2004-12-10','damaris','0789',0,'2021-02-08')");	
-	}
-}
-
-function actualizar_usuarios($ape,$nm,$cd,$drc,$tlf,$cor,$sex,$fn,$us,$ps,$id){
-	if($this->con){
-		//devuelve una consulta de la tabla de usuarios
-		return $this->con->query("UPDATE usuarios SET
-			apellidos='$ape',
-			nombres='$nm' ,
-			ciudad='$cd' ,
-			direccion='$drc' ,
-			telefono='$tlf' ,
-			correo='$cor' ,
-			sexo='$sex' ,
-			fecha_nacimiento='$fn' ,
-			usuario='$us' ,
-			password='$ps' 
-			WHERE id='$id'
+		return $this->con->query("
+			INSERT INTO usuarios 
+			(apellidos,
+			nombres,
+			correo,
+			fecha_nacimiento,
+			sexo,
+			usuario,
+			password,
+			ciudad,
+			direccion,
+			telefono,
+			fecha_registro
+			)
+			values('$datos[0]',
+			'$datos[1]',
+			'$datos[2]',
+			'$datos[3]',
+			'$datos[4]',
+			'$datos[5]',
+			'$datos[6]',
+			'$datos[7]',
+			'$datos[8]',
+			'$datos[9]',
+			'$fecha'
+			)
 			");
 
-	    }
-     }
+	}
+ }
 }
+
+
+
+// 	if($this->con){
+// 		return $this->con->query("INSERT INTO usuarios 
+//                                 (id,apellidos,nombres,ciudad,direccion,telefono,correo,sexo,fecha_nacimiento,usuario,contraseña,estado,fecha_registro)
+//                                 VALUES (6,'Pilca','Damaris','Quito','El conde','0995212854','damaris@gmail.com','Mujer','2004-12-10','damaris','0789',0,'2021-02-08')");	
+// 	}
+// }
+
+// function actualizar_usuarios($ape,$nm,$cd,$drc,$tlf,$cor,$sex,$fn,$us,$ps,$id){
+// 	if($this->con){
+// 		//devuelve una consulta de la tabla de usuarios
+// 		return $this->con->query("UPDATE usuarios SET
+// 			apellidos='$ape',
+// 			nombres='$nm' ,
+// 			ciudad='$cd' ,
+// 			direccion='$drc' ,
+// 			telefono='$tlf' ,
+// 			correo='$cor' ,
+// 			sexo='$sex' ,
+// 			fecha_nacimiento='$fn' ,
+// 			usuario='$us' ,
+// 			password='$ps' 
+// 			WHERE id='$id'
+// 			");
+
+// 	    }
+ 
 
 
 //$Conexion=new conexion();

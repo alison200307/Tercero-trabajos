@@ -20,6 +20,33 @@ $(document).on("click",".btn_registrar",()=>{
 		$("#msj_correo").attr("class","bg-danger");
 		return false;
 	}
+	let fn = $("#fecha_nacimiento").val();
+	if(fn.length==0) {
+		$("#msj_fecha_nacimiento").attr("class","bg-danger");
+		return false;
+	}
+	let obj_sexo=$(".obj_radio");
+	let sexo="";
+	$(obj_sexo).map(function(){
+		if( $(this).prop('checked')==true){
+			sexo=$(this).val();
+		}
+		
+	});
+	if(sexo==""){
+		alert('Seleccione una opcion');
+		return false;
+	}
+	let us = $("#usuario").val();
+	if(us.length==0) {
+		$("#msj_usuario").attr("class","bg-danger");
+		return false;
+	}	
+	let password = $("#password").val();
+	if(password.length==0) {
+		$("#msj_password").attr("class","bg-danger");
+		return false;
+	}
     let city = $("#ciudad").val();
 	if(city.length==0) {
 		$("#msj_ciudad").attr("class","bg-danger");
@@ -35,39 +62,14 @@ $(document).on("click",".btn_registrar",()=>{
 		$("#msj_telefono").attr("class","bg-danger");
 		return false;
 	}	
-	let fn = $("#fecha_nacimiento").val();
-	if(fn.length==0) {
-		$("#msj_fecha_nacimiento").attr("class","bg-danger");
-		return false;
-	}	
-	let us = $("#usuario").val();
-	if(us.length==0) {
-		$("#msj_usuario").attr("class","bg-danger");
-		return false;
-	}
-	let password = $("#password").val();
-	if(password.length==0) {
-		$("#msj_password").attr("class","bg-danger");
-		return false;
-	}	
-	let obj_sexo=$(".obj_radio");
-	let sexo="";
-	$(obj_sexo).map(function(){
-		if( $(this).prop('checked')==true){
-			sexo=$(this).val();
-		}
 		
-	});
-	if(sexo==""){
-		alert('Seleccione una opcion');
-		return false;
-	}
+	
     let terminos=$('#terminos');
     if( $(terminos).prop('checked')==false){
 	    alerta('error','Debe aceptar los terminos y condiciones','Alerta',true,'center',0);
 	    return false;
 }
- let datos=[ap,n,co,city,drc,tlf,fn,us,password];
+ let datos=[ap,n,co,fn,sexo,us,password,city,drc,tlf];
  //console.log(datos);
 envio_datos(datos);
  //alerta('success','Datos Registrados','Proceso correcto',false,'bottom-end',3000);
@@ -136,8 +138,14 @@ const envio_datos=(datos)=>{
 		beforeSend:()=>{
 		},
 		success:(result)=>{
-			console.log(result);
+			//console.log(result);
+			if(result==0) {
+		alerta('success','Datos Registrados correctamente','Registro correcto',true);
+        window.history.go(0);        
+}else{
+	alerta('error','Algo salio mal','Error',true);
 
+			}
 		}
 	})
 
