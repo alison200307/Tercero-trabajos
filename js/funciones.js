@@ -4,6 +4,20 @@ $(function(){ //CUANDO CARGE LA PAGINA
 
 })
 
+$(document).on("click",".btn_editar", function(){
+ let usu_id=$(this).attr('usu_id');
+ $.ajax({
+ 	url:'./clases/acciones.php',
+ 	method:'POST',
+ 	data:{op:2,usu_id:usu_id},
+ 	success:(result)=>{
+ 		alert(result);
+ 	}
+ });
+
+})
+
+
 $(document).on("click",".btn_registrar",()=>{
 	let ap = $("#apellidos").val();
 	if(ap.length==0){
@@ -119,7 +133,9 @@ const traer_datos=()=>{
 			             <td>${item[10]}</td>
 			             <td>${item[11]}</td>
 			             <td>${item[12]}</td>
-			             <td> <i class='btn btn-info btn-xs'>Editar </i></td>
+			             <td><i usu_id='${item[0]}' class=" btn fas fa-pencil-alt btn_editar">Editar</i></td>
+                         <td><i class="btn fas fa-trash-alt btn_eliminar">Eliminar</i></td>
+			            
 			    </tr>`;
 })
 	$("#tbody_datos").html(row);
