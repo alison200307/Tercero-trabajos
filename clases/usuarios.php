@@ -4,12 +4,20 @@ require_once("conexion.php");
 class Usuarios extends conexion
 {
 
-function listar_usuarios(){
+function lista_usuarios(){
 	if($this->con){
 		//devuelve una consulta de la tabla usuarios
 		return $this->con->query("SELECT * FROM usuarios");
 	}
 }
+
+function listar_un_usuario($id){
+	if ($this->con){
+		return $this->con->query("SELECT * FROM usuarios where id=$id");
+		
+	}
+}
+
 function create_user($datos){
 	$fecha=date('Y-m-d');
 	if($this->con){

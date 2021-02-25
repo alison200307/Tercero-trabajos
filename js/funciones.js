@@ -11,7 +11,22 @@ $(document).on("click",".btn_editar", function(){
  	method:'POST',
  	data:{op:2,usu_id:usu_id},
  	success:(result)=>{
- 		alert(result);
+
+ 		const usuario=$.parseJSON(result);
+ 		console.log(usuario);
+ 		$("#apellidos").val(usuario[1]);
+ 		$("#nombres").val(usuario[2]);
+ 		$("#correo").val(usuario[3]);
+ 		$("#fecha_nacimiento").val(usuario[4]);
+ 		$("#"+usuario[5]).prop("checked",true);
+ 		$("#usuario").val(usuario[6]);
+ 		$("#password").val(usuario[7]);
+ 		$("#ciudad").val(usuario[8]);
+ 		$("#direccion").val(usuario[9]);
+ 		$("#telefono").val(usuario[10]);
+
+
+
  	}
  });
 
