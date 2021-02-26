@@ -1,0 +1,61 @@
+<! -- Jonathan Jami -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/77dce58366.js" crossorigin="anonymous"></script>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/javascript" href="JS/jquery-3-5-1.js">
+	<link rel="stylesheet" type="text/javascript" href="JS/formulariomartes.js">
+	<link rel="stylesheet"  href="CSS/formulariomartes.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row text-center" style="background: #e57a44">
+			<div class="col-md-1 ">
+				<img src="IMG/2564078.jpg" style="width: 60px; padding-top:3px;">
+			</div>
+			<div class="col-md-9 ">
+				<h1 style="font-family: 'Arial Black'">My Deports</h1>
+			</div>  
+			<div class="col-md-2 icon_whats pt-2" style="background: #aaadc4;">
+				<i class="fab fa-whatsapp-square fa-2x">
+					<span style="color:#000000;">0980861340</span>
+				</i>
+			</div>  
+		</div>
+	</div>
+	<h1></h1>
+	<form onsubmit="return validar()" class="pt-5px;">
+	<div class="container">
+		<div class="col-md-12">
+
+		<label for="">Nombres <i class="text-danger"><small text-muted>* Min. 6 numeros</small></i></label>
+		<input type="text" id="nombre" name="nombre"  class="form-control" placeholder="Ej. Fernando">
+			
+
+		<label for="">Apellidos <i class="text-danger"><small text-muted>* Min. 4 numeros</small></i></label>
+		<input type="text" id="apellidos" name="apellidos"  class="form-control" placeholder="Ej. lopez">
+
+		<label for="">Telefono <i class="text-danger"><small text-muted>* Min. 10 numeros</small></i></label>
+		<input type="text" id="telefono" name="telefono"  class="form-control" placeholder="Ej: 099999999">
+		
+		<label for="">Correo <i class="text-danger"><small text-muted>* Obligatorio</small> </i></label>
+		<input type="text" id="correo" name="correo"  class="form-control" placeholder="Ej. Usuario@gmail.com">
+		<br>
+		<button class="btn btn-success" id="btn_registrar">Registrar</button>	
+		<br>	
+	</div>
+	</div>
+	
+	
+	
+
+</form>
+</body>
+</html>
+

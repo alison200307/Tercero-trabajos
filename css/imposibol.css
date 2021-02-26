@@ -1,0 +1,21 @@
+.abs-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.form {
+  width: 900px;
+}
+h1{
+	background: #3CFF00;
+	text-align: center;
+	border-radius: 5px;
+}
+.registrar{
+	text-align: center;
+}
+body{
+	background: #fbd1a2;
+}

@@ -1,0 +1,42 @@
+<! -- Jonathan Jami -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/77dce58366.js" crossorigin="anonymous"></script>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"  href="CSS/lunes11.css">
+	
+<body>
+	<br><br><br><br>
+	<h1>Suma de dos valores</h1>
+		<div class="col-md-5">
+		<form>
+			Primer Número:<br>
+			<input type="text" id="t1" class="valor1" >
+			<br>
+			Segundo Número:<br>
+			<input type="text" id="t2" class="valor2">
+			<br><br>
+			<input type="button" value="Calcular" class="btn btn-success" onclick="Calcular(); ">
+		</form>
+		</div> 
+		<br><br>
+		
+
+</body>
+
+<script>
+	function Calcular() {
+ var vr1 = document.getElementById('t1').value;
+ var vr2 = document.getElementById('t2').value;
+ var suma;
+ suma=parseInt(vr1) +parseInt(vr2);
+ 
+ alert("La suma es:"+suma);
+  }
+</script>
+
+</head>

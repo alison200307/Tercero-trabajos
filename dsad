@@ -1,0 +1,47 @@
+[33mcommit 78a29440acf6a61eda813869a7d3bc8d8235bce5[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Jonathan Jami <jonathanjami765@gmail.com>
+Date:   Wed Feb 10 19:19:49 2021 -0500
+
+    Aplicacion del JSON 10/02/2021
+
+[33mcommit bbdce46ee9bb2f028746366574a9c99e8c3e3b41[m
+Author: Jonathan Jami <jonathanjami765@gmail.com>
+Date:   Tue Feb 9 17:37:26 2021 -0500
+
+    Orden correcto del codigo de PHP
+
+[33mcommit 314a35ec45f4e6984377d9d181388d98951b73d1[m
+Author: Jonathan Jami <jonathanjami765@gmail.com>
+Date:   Mon Feb 8 19:23:59 2021 -0500
+
+    Modificacion de registros 08/02/2021
+
+[33mcommit eedf287bfbbd1312bd061eac9944e23a035d0799[m
+Author: Jonathan Jami <jonathanjami765@gmail.com>
+Date:   Fri Jan 29 21:52:08 2021 -0500
+
+    Ejemplo simple en PHP
+
+[33mcommit 4daef41767a81e328ade7e033c115a54ec88201e[m
+Author: Jonathan Jami <jonathanjami765@gmail.com>
+Date:   Thu Jan 28 19:04:13 2021 -0500
+
+    Traer BD php
+
+[33mcommit 2b5a6fb4efb253395cc5f785233c822ed8051746[m
+Author: Jonathan Jami <jonathanjami765@gmail.com>
+Date:   Fri Jan 22 21:55:19 2021 -0500
+
+    Objetod de varios registros 22/01/2021 21:55
+
+[33mcommit c808f389c112b87c045040c33968dd5f173b2a42[m
+Author: Jonathan Jami <jonathanjami765@gmail.com>
+Date:   Fri Jan 22 08:48:37 2021 -0500
+
+    22/01/2021 atraer objetos tipo base de datos
+
+[33mcommit c3d2a04266ef134a971d396a37b5fc887cd5331a[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Jonathan Jami <jonathanjami765@gmail.com>
+Date:   Thu Jan 21 20:01:31 2021 -0500
+
+    Tarea 21/01/2021

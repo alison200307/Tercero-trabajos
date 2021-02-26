@@ -1,0 +1,62 @@
+body{
+	background: #EEEBD0;
+}
+div.container{
+
+}
+div.header{
+	background:#e5989b;
+	position: absolute;
+	top: 10px;
+	left: 60px;
+	width: 90%;
+	height: 47px;
+	text-align: center;
+	border: solid 1px;
+}
+div.logo img{
+	width: 50px;
+	background: #00FFE4
+	margin-left:10px;
+	border-radius: 2px;
+	border-left:  1px;
+}
+div.header span{
+	font-size:40px; 
+	font-family: 'Times New Roman' 
+	color: #fff;
+	text-transform: uppercase;
+}
+div.menu{
+/*	background:  teal; */
+	position: absolute;
+	widows: 10%;
+	height: 85%
+	border:solid 2px #ccc ;
+
+}
+div.menu ul{
+	margin-left: -40px;
+}
+div.menu li{
+	list-style: none;
+	margin-top: 5px;
+	padding: 5px;
+	border-radius: 3px;
+	border:solid 1px #454372;
+}
+div.menu a{
+	text-decoration: none;
+	
+}
+div.menu li:hover{
+	background: #fff;
+	border: solid; 1px;
+	width: 90px;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+div.menu a hover{
+color: #000;
+
+}

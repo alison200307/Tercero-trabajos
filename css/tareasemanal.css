@@ -1,0 +1,65 @@
+div.container-fluid {
+/*	background:  teal; */
+	position: absolute;
+	widows: 10%;
+	height: 85%
+	border:solid 2px #ccc ;
+
+}
+div.container-fluid ul{
+	margin-left: -40px;
+}
+
+div.container-fluid li{
+	background: #e3d985;
+	list-style: none;
+	margin-top: 5px;
+	padding: 5px;
+	border-radius: 3px;
+	border:solid 1px #454372;
+	margin: 4px;
+}
+div.a{
+	text-decoration: none;
+	
+}
+div.li:hover{
+	background: #FFFFFF;
+	border: solid; 1px;
+	width: 90px;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+div.a hover{
+color: #000;
+
+}
+div.icon_whats{
+	color: #00B132;
+}
+
+div.area_trabajo {
+	height: 200px;
+}
+
+div.copi{
+	color: #000000;
+}
+
+img{
+	width: 40px;
+}
+
+input.valor1{
+	border-radius: 5px;
+	outline: none;
+	background: #FFC62B;
+	border:none;
+}
+input.valor2{
+border-radius: 5px;
+	outline: none;
+	background: #FFC62B;
+	border:none;
+}
+

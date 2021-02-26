@@ -1,0 +1,102 @@
+<! -- Jonathan Jami -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/77dce58366.js" crossorigin="anonymous"></script>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"  href="CSS/tareasemanal.css">
+	
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row text-center" style="background: #e57a44">
+			<div class="col-md-1 ">
+				<img src="IMG/2564078.jpg" style="width: 60px; padding-top:3px;">
+			</div>
+			<div class="col-md-9 ">
+				<h1 style="font-family: 'Arial Black'">My Deports</h1>
+			</div>  
+			<div class="col-md-2 icon_whats pt-2" style="background: #aaadc4;">
+				<i class="fab fa-whatsapp-square fa-2x">
+					<span style="color:#000000;">0980861340</span>
+				</i>
+			</div>  
+		</div>
+	</div>
+<br>
+<br>
+<br>
+	<div class="container-fluid">
+		<div class=" row area_trabajo">
+			<div class="col-md-1.5">
+				<ul>
+				<li><i class="fab fa-dyalog"></i>
+					<a href="https://es.wikipedia.org/wiki/Deporte" target="_blank" >efiniciones</a>
+					
+				</li>
+				<li><i class="fas fa-italic"></i>
+					<a href="https://www.importancia.org/deporte.php#:~:text=La%20importancia%20del%20deporte%20es,tensi%C3%B3n%20y%2C%20adem%C3%A1s%2C%20divertirse." target="_blank">mportancia</a>
+				
+				</li>
+				<li><i class="fab fa-etsy"></i>
+					<a href="https://genial.guru/inspiracion-mujer/7-ejercicios-que-transformaran-tu-cuerpo-en-tan-solo-4-semanas-424610/" target="_blank" >jercicios</a>
+					
+				</li>
+				<li><i class="fab fa-stripe-s"></i>
+					<a href="https://www.vitonica.com/entrenamiento/rutina-de-ejercicios-en-casa-un-ejemplo-practico" target="_blank">eries</a></li>
+				</ul>
+	
+			</div>
+			<div class="col-md-10.5 pt-2 ">
+				<img  src="IMG/Deportes.jpg" width="500px; " >
+			</div>
+	</div>
+	<div class="col-md-5">
+		<form>
+			Primer Número:<br>
+			<input type="text" id="t1" class="valor1">
+			<br>
+			Segundo Número:<br>
+			<input type="text" id="t2" class="valor2">
+			<br><br>
+			 <input type="button" value="Calcular" class="btn btn-warning" onclick="Calcular(); ">
+		</form> 
+		<p id="suma"></p>
+	</div>
+<hr>
+	<div class="row copi">
+			<div class="col-md-8 iconos pt-2" >
+				<span >Copyright</span>	
+			</div>
+			<div class="col-md-4 iconos pt-2" >
+				<span >Buscanos en:</span>
+				<a href="https://es-la.facebook.com/" target="_blank">
+					<i class="fab fa-facebook-f fa-2x" style="color: # 405DE6;"></i>
+				</a>
+				<a href="https://www.instagram.com/?hl=es" target="_blank">
+					<i class="fab fa-instagram-square fa-2x"style="color: #3f729b;"></i>
+				</a>
+			<a href="https://twitter.com/?lang=es" target="_blank">
+					<i class="fab fa-twitter-square fa-2x" style="color: #00acee;"></i>
+				</a>
+				
+			</div>
+			
+	</div>
+
+</body>
+
+
+<script>
+	function Calcular() {
+ var vr1 = document.getElementById('t1').value;
+ var vr2 = document.getElementById('t2').value;
+ var p = (parseFloat(vr1)+parseFloat(vr2));
+ document.getElementById('suma').innerHTML = p;
+ }
+</script>
+</html>
+

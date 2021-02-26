@@ -13,17 +13,18 @@ $(document).on("click",".btn_editar", function(){
  	success:(result)=>{
 
  		const usuario=$.parseJSON(result);
- 		console.log(usuario);
+ 		//console.log(usuario);
+ 		$("#usu_id").val(usuario[0]);
  		$("#apellidos").val(usuario[1]);
  		$("#nombres").val(usuario[2]);
  		$("#correo").val(usuario[3]);
- 		$("#fecha_nacimiento").val(usuario[4]);
- 		$("#"+usuario[5]).prop("checked",true);
- 		$("#usuario").val(usuario[6]);
- 		$("#password").val(usuario[7]);
- 		$("#ciudad").val(usuario[8]);
- 		$("#direccion").val(usuario[9]);
- 		$("#telefono").val(usuario[10]);
+ 		$("#ciudad").val(usuario[4]);
+ 		$("#direccion").val(usuario[5]);
+ 		$("#telefono").val(usuario[6]);
+ 		$("#fecha_nacimiento").val(usuario[7]);
+ 		$("#usuario").val(usuario[8]);
+ 		$("#"+usuario[10]).prop("checked",true);
+ 	
 
 
 
@@ -34,6 +35,8 @@ $(document).on("click",".btn_editar", function(){
 
 
 $(document).on("click",".btn_registrar",()=>{
+	
+	let id=$("#usu_id").val();
 	let ap = $("#apellidos").val();
 	if(ap.length==0){
 		$("#msj_apellidos").attr("class","bg-danger");
@@ -98,7 +101,7 @@ $(document).on("click",".btn_registrar",()=>{
 	    alerta('error','Debe aceptar los terminos y condiciones','Alerta',true,'center',0);
 	    return false;
 }
- let datos=[ap,n,co,fn,sexo,us,password,city,drc,tlf];
+ let datos=[ap,n,co,fn,sexo,us,password,city,drc,tlf,id];
  //console.log(datos);
 envio_datos(datos);
  //alerta('success','Datos Registrados','Proceso correcto',false,'bottom-end',3000);
@@ -133,8 +136,14 @@ const traer_datos=()=>{
 		},
 		success:(result)=>{
 			const usuarios=$.parseJSON(result);
+			//console.log(usuarios);
 			let row="";
+			let s="";
+			let e="";
 			usuarios.map( (item)=>{	
+			 item[10]=="H"?s="Hombre":s="Mujer";
+			 item[11]=="1"?e="Activo":e="Inactivo";
+
 			row+=`<tr>   <td></td>
 			             <td>${item[1]}</td>
 			             <td>${item[2]}</td>
@@ -145,8 +154,8 @@ const traer_datos=()=>{
 			             <td>${item[7]}</td>
 			             <td>${item[8]}</td>
 			             <td>${item[9]}</td>
-			             <td>${item[10]}</td>
-			             <td>${item[11]}</td>
+			             <td>${s}</td>
+			             <td>${e}</td>
 			             <td>${item[12]}</td>
 			             <td><i usu_id='${item[0]}' class=" btn fas fa-pencil-alt btn_editar">Editar</i></td>
                          <td><i class="btn fas fa-trash-alt btn_eliminar">Eliminar</i></td>
@@ -171,7 +180,7 @@ const envio_datos=(datos)=>{
 		success:(result)=>{
 			//console.log(result);
 			if(result==0) {
-		alerta('success','Datos Registrados correctamente','Registro correcto',true);
+		//alerta('success','Datos Registrados correctamente','Registro correcto',true);
         window.history.go(0);        
 }else{
 	alerta('error','Algo salio mal','Error',true);

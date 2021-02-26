@@ -4,7 +4,7 @@ require_once("conexion.php");
 class Usuarios extends conexion
 {
 
-function lista_usuarios(){
+function listar_usuarios(){
 	if($this->con){
 		//devuelve una consulta de la tabla usuarios
 		return $this->con->query("SELECT * FROM usuarios");
@@ -12,8 +12,24 @@ function lista_usuarios(){
 }
 
 function listar_un_usuario($id){
-	if ($this->con){
+	if($this->con){
 		return $this->con->query("SELECT * FROM usuarios where id=$id");
+	}
+}
+
+function modifica_usuario($datos){
+	if ($this->con) {
+		return $this->con->query("UPDATE usuarios set 
+			apellidos='$datos[0]',
+			nombres='$datos[1]',
+			correo='$datos[2]',
+			fecha_nacimiento='$datos[3]',
+			sexo='$datos[4]',
+			usuario='$datos[5]',
+			ciudad='$datos[7]',
+			direccion='$datos[8]',
+			telefono='$datos[9]'  WHERE id=$datos[10]
+		");
 		
 	}
 }
