@@ -26,6 +26,17 @@ if(isset($_POST['op'])){
 		$usuario=mysqli_fetch_all( $usuarios->listar_un_usuario($_POST['usu_id']) );
 		echo json_encode($usuario[0]);
 		break;
+		case 3:
+		//Elimino 1 usuaio
+		if( $usuarios->eliminar_usuario($_POST['usu_id']) ){
+			return 0;
+
+		}else{
+
+			return 1;
+		}
+
+		break;
 	
 	
 	}

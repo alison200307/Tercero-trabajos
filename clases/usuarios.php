@@ -67,7 +67,22 @@ function create_user($datos){
 
 	}
  }
+
+
+function eliminar_usuario($usu_id){
+  if($this->con){
+  	 return $this->con->query("DELETE FROM usuarios where id=$usu_id ");
+  }
+
 }
+
+
+
+
+
+
+}
+
 
 
 

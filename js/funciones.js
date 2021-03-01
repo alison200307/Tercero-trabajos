@@ -27,10 +27,40 @@ $(document).on("click",".btn_editar", function(){
  	
 
 
-
  	}
  });
 
+})
+
+
+$(document).on("click",".btn_eliminar",function(){
+    // alert( $(this).attr('usu_id') );
+    let usu_id=$(this).attr('usu_id');
+    $.ajax({
+    	url:'./clases/acciones.php',
+    	method:'POST',
+    	data:{usu_id:usu_id,op:3},
+    	beforesend:()=>{
+    		if(confirm("¿Esta seguro de eliminar?") ){
+    			return true;
+    		}else{
+    			return false;
+    	
+    		}
+
+    	},
+    	success:(result)=>{
+    		if(result==0){
+    			alert('Eliminado Correctamente');
+                window.history.go();
+
+    		}else{
+    			alert('Error al eliminar');
+    		}
+
+    	}
+    })
+  
 })
 
 
@@ -158,7 +188,7 @@ const traer_datos=()=>{
 			             <td>${e}</td>
 			             <td>${item[12]}</td>
 			             <td><i usu_id='${item[0]}' class=" btn fas fa-pencil-alt btn_editar">Editar</i></td>
-                         <td><i class="btn fas fa-trash-alt btn_eliminar">Eliminar</i></td>
+                         <td><i usu_id='${item[0]}' class="btn fas fa-trash-alt btn_eliminar">Eliminar</i></td>
 			            
 			    </tr>`;
 })
@@ -180,7 +210,7 @@ const envio_datos=(datos)=>{
 		success:(result)=>{
 			//console.log(result);
 			if(result==0) {
-		//alerta('success','Datos Registrados correctamente','Registro correcto',true);
+		alerta('success','Datos Registrados correctamente','Registro correcto',true);
         window.history.go(0);        
 }else{
 	alerta('error','Algo salio mal','Error',true);
